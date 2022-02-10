@@ -16,19 +16,36 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function (req, res) {
-  return res.render("start")
+  return res.render("start", { items: food })
+
 })
 
 server.get("/about", function (req, res) {
   return res.render("about")
+
 })
 
-server.get("/", function (req, res) {
-  return res.render("food", {items: food})
+server.get("/recipes", function (req, res) {
+  return res.render("recipes", { items: food })
 })
 
-server.listen(5000, function(){
-    console.log("server is running")
+server.get("/recipes/:id", function (req, res) {
+  const id = req.params.id;
+  console.log(id)
+
+  const food = food.find(function (food) {
+    // console.log(food)
+    return food.id == id
+  })
+  if (!food) {
+    return res.send("Recipe not found! :(")
+  }
+
+  return res.render("food", { item: food })
+});
+
+server.listen(5000, function () {
+  console.log("server is running")
 })
 
 server.use(function (req, res) {
