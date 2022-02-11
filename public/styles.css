@@ -273,19 +273,19 @@ iframe {
 }
 
 
-.card_receitas .card .card__recipe-container .foto{
+.card_receitas .receipt_card .card__recipe-container .foto{
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 0 0 12px 0;
 }
 
-.card_receitas .card .card__recipe-container img{
+.card_receitas .receipt_card .card__recipe-container img{
     border-radius: 15px;
     max-width: 100%;
 }
 
-.card_receitas .card .card__recipe-container .card__content{
+.card_receitas .receipt_card .card__recipe-container .card__content{
 /* titulo */
 text-align: center;
 font-size: 28px;
@@ -293,7 +293,7 @@ line-height: 38px;
 font-weight: bold;
 }
 
-.card_receitas .card .card__recipe-container .card__info{
+.card_receitas .receipt_card .card__recipe-container .card__info{
 /* autor */
 text-align: center;
 font-size: 16px;
@@ -302,7 +302,7 @@ font-weight: bold;
 color: #989898;
 }
 
-.card_receitas .card .card__recipe-container .card__ingredients{
+.card_receitas .receipt_card .card__recipe-container .card__ingredients{
 /* igredientes */
 font-size: 14px;
 line-height: 24px;
@@ -310,20 +310,20 @@ position: relative;
 margin-left: 2vw;
 }
 
-.card_receitas .card .card__recipe-container .card__ingredients li{
+.card_receitas .receipt_card .card__recipe-container .card__ingredients li{
  /* instrucao de preparação */
  position: relative;
  margin-left: 2vw;
 }
 
-.card_receitas .card .card__recipe-container .card__ingredients h2{
+.card_receitas .receipt_card .card__recipe-container .card__ingredients h2{
  /* instrucao de preparação */
  font-size: 14px;
  line-height: 24px;
  font-weight: bold;
 }
 
-.card_receitas .card .card__recipe-container .card__preparation{
+.card_receitas .receipt_card .card__recipe-container .card__preparation{
  /* instrucao de preparação */
  font-size: 14px;
  line-height: 24px;
@@ -331,20 +331,20 @@ margin-left: 2vw;
  margin-left: 2vw;
 }
 
-.card_receitas .card .card__recipe-container .card__preparation li{
+.card_receitas .receipt_card .card__recipe-container .card__preparation li{
  /* instrucao de preparação */
  position: relative;
  margin-left: 2vw;
 }
 
-.card_receitas .card .card__recipe-container .card__preparation h2{
+.card_receitas .receipt_card .card__recipe-container .card__preparation h2{
  /* instrucao de preparação */
  font-size: 14px;
  line-height: 24px;
  font-weight: bold;
 }
 
-.card_receitas .card .card__recipe-container .card__information{
+.card_receitas .receipt_card .card__recipe-container .card__information{
  /* instrucao extra */
  font-size: 14px;
  line-height: 24px;
@@ -352,7 +352,7 @@ margin-left: 2vw;
  margin-left: 2vw;
 }
 
-.card_receitas .card .card__recipe-container .card__information h2{
+.card_receitas .receipt_card .card__recipe-container .card__information h2{
  /* instrucao de preparação */
  font-size: 14px;
  line-height: 24px;
