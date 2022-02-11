@@ -25,15 +25,6 @@ server.get("/about", function (req, res) {
 
 })
 
-
-
-
-
-
-
-
-
-
 server.get("/recipes", function (req, res) {
   return res.render("recipes", { items: recipes })
 })

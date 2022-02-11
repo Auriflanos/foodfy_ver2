@@ -5,7 +5,7 @@
 {% block content %}
   <section class="banner">
     <div class="card">
-      <div class="card__image-container">
+      <div class="card__recipe-container">
         <img src="{{ item.image }}" alt="{{ item.title }}">
           <div class="card__content">
             {{ item.title }}
@@ -14,15 +14,30 @@
             {{ item.author }}
           </div>
           <div class="card__ingredients">
-            {{ item.ingredients }}
+            <h2>Ingredientes</h2>
+            <li>
+              {% for ingredients in item.ingredients %}
+                <li>{{ ingredients }}</li>
+              {% endfor %}
+            </li>
           </div>
-          <div class="card__preparation">
-            {{ item.preparation }}
-          </div>
-          <div class="card__information">
-            {{ item.information }}
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endblock %}
+          <br>
+            <br>
+              <div class="card__preparation">
+                <h2>Instrução de Preparação</h2>
+                <li>
+                  {% for preparation in item.preparation %}
+                    <li>{{ preparation }}</li>
+                  {% endfor %}
+                </li>
+              </div>
+              <br>
+                <br>
+                  <div class="card__information">
+                    <h2>Instruções Extras</h2>
+                    {{ item.information }}
+                  </div>
+                </div>
+              </div>
+            </section>
+          {% endblock %}

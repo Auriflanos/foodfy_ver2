@@ -13,6 +13,12 @@
     text-decoration: none;
 }
 
+.body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
 body .header, .banner, .cards{
     margin: 2vw 7vw 0;
     font-size: 100%;
@@ -51,7 +57,6 @@ header .nav a{
     border-radius: 30px;
     display: flex;
     align-items: center;
-    height: 100%;
     justify-content: space-between;
 }
 
@@ -122,11 +127,13 @@ header .nav a{
     background-color: #EEEEEE;
     color: #999999;
     font-size: 14px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     height: 62px;
-    justify-content: center;    
+    justify-content: center;
+    bottom: 0;
+    margin-top: auto;    
 }
 
 /* ############## Sobre ############## */
@@ -252,4 +259,70 @@ iframe {
     text-align: center;
     font-size: 14px;
     line-height: 24px;
+}
+
+/* == Receitas individuais == */
+
+.banner .card .card__recipe-container img{
+    border-radius: 15px;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+
+}
+
+.banner .card .card__recipe-container .card__content{
+/* titulo */
+text-align: center;
+font-size: 28px;
+line-height: 38px;
+font-weight: bold;
+}
+
+.banner .card .card__recipe-container .card__info{
+/* autor */
+text-align: center;
+font-size: 16px;
+line-height: 26px;
+font-weight: bold;
+color: #989898;
+}
+
+.banner .card .card__recipe-container .card__ingredients{
+/* igredientes */
+font-size: 14px;
+line-height: 24px;
+}
+
+.banner .card .card__recipe-container .card__ingredients h2{
+ /* instrucao de preparação */
+ font-size: 14px;
+ line-height: 24px;
+ font-weight: bold;
+}
+
+.banner .card .card__recipe-container .card__preparation{
+/* instrucao de preparação */
+font-size: 14px;
+line-height: 24px;
+}
+
+.banner .card .card__recipe-container .card__preparation h2{
+ /* instrucao de preparação */
+ font-size: 14px;
+ line-height: 24px;
+ font-weight: bold;
+}
+
+.banner .card .card__recipe-container .card__information{
+ /* instrucao extra */
+ font-size: 14px;
+ line-height: 24px;
+}
+
+.banner .card .card__recipe-container .card__information h2{
+ /* instrucao de preparação */
+ font-size: 14px;
+ line-height: 24px;
+ font-weight: bold;
 }
