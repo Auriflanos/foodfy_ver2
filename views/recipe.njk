@@ -7,39 +7,72 @@
     <div class="receipt_card">
       <div class="card__recipe-container">
         <div class="foto">
-          <img src="{{ item.image }}" alt="{{ item.title }}">
-          </div>
+          <img src="{{ item.image }}" alt="{{ item.title }}"></div>
           <div class="card__content">
             {{ item.title }}
           </div>
           <div class="card__info">
             {{ item.author }}
           </div>
+          {# Igredientes #}
           <div class="card__ingredients">
             <h2>Ingredientes</h2>
-            <ul>
-              {% for ingredients in item.ingredients %}
-                <li>{{ ingredients }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-          <br>
-            <br>
-              <div class="card__preparation">
-                <h2>Instrução de Preparação</h2>
-                <ol>
-                  {% for preparation in item.preparation %}
-                    <li>{{ preparation }}</li>
-                  {% endfor %}
-                </ol>
-              </div>
+            <label for="show">
+              <span>=> Exibir conteúdo</span>
+            </label>
+            <input type="radio" id="show" name="group">
               <br>
-                <br>
-                  <div class="card__information">
-                    <h2>Instruções Extras</h2>
-                    {{ item.information }}
-                  </div>
+                <label for="hide">
+                  <span>=>Esconder conteúdo</span>
+                </label>
+                <input type="radio" id="hide" name="group">
+                  <span id="content">
+                    <ul>
+                      {% for ingredients in item.ingredients %}
+                        <li>{{ ingredients }}</li>
+                      {% endfor %}
+                    </span>
+                  </ul>
                 </div>
-              </div>
-            </section>
-          {% endblock %}
+                <br>
+                  {# Preparação #}
+                  <div class="card__preparation">
+                    <h2>Instrução de Preparação</h2>
+                    <label for="show2">
+                      <span>=> Exibir conteúdo</span>
+                    </label>
+                    <input type="radio" id="show2" name="group">
+                      <br>
+                        <label for="hide">
+                          <span>=>Esconder conteúdo</span>
+                        </label>
+                        <input type="radio" id="hide2" name="group">
+                          <span id="content2">
+                            <ol>
+                              {% for preparation in item.preparation %}
+                                <li>{{ preparation }}</li>
+                              {% endfor %}
+                            </ol>
+                          </span>
+                        </div>
+                        <br>
+                          {# Extra #}
+                          <div class="card__information">
+                            <h2>Instruções Extras</h2>
+                            <label for="show3">
+                              <span>=> Exibir conteúdo</span>
+                            </label>
+                            <input type="radio" id="show3" name="group">
+                              <br>
+                                <label for="hide3">
+                                  <span>=>Esconder conteúdo</span>
+                                </label>
+                                <input type="radio" id="hide3" name="group">
+                                  <span id="content3">
+                                    {{ item.information }}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        {% endblock %}

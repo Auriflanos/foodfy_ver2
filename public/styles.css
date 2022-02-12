@@ -272,6 +272,9 @@ iframe {
     margin: 0 5vw 15px;
 }
 
+.card_receitas .receipt_card, .card_receitas .receipt_card .card__recipe-container {
+    width: 100%;
+}
 
 .card_receitas .receipt_card .card__recipe-container .foto{
     width: 100%;
@@ -357,4 +360,55 @@ margin-left: 2vw;
  font-size: 14px;
  line-height: 24px;
  font-weight: bold;
+}
+
+/* === Show/Hide Ingredientes === */
+
+input#show, input#hide {
+    display:none;
+}
+
+span#content {
+    display:none;
+}
+input#show:checked ~ span#content {
+  display:block;
+}
+
+input#hide:checked ~ span#content {
+    display:none;
+}
+
+/* === Show/Hide Preparação === */
+
+input#show2, input#hide2 {
+    display:none;
+}
+
+span#content2 {
+    display:none;
+}
+input#show2:checked ~ span#content2 {
+  display:block;
+}
+
+input#hide2:checked ~ span#content2 {
+    display:none;
+}
+
+/* === Show/Hide Extra === */
+
+input#show3, input#hide3 {
+    display:none;
+}
+
+span#content3 {
+    display:none;
+}
+input#show3:checked ~ span#content3 {
+  display:block;
+}
+
+input#hide3:checked ~ span#content3 {
+    display:none;
 }
